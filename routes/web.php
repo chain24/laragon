@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth'])->group( function (){
+
+});
+
+Route::get('create-school', 'SchoolController@index')->middleware('master.admin');
