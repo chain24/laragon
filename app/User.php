@@ -2,13 +2,22 @@
 
 namespace App;
 
+use App\Model;
+use Laravel\Cashier\Billable;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Lab404\Impersonate\Models\Impersonate;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Authenticatable
+
+class User extends Model implements AuthenticatableContract,AuthorizableContract,CanResetPasswordContract
 {
-    use Notifiable;
+    use Authenticatable, Authorizable, CanResetPassword, HasApiTokens, Notifiable, Impersonate, Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role', 'code', 'student_code', 'active', 'verified', 'school_id', 'section_id',
     ];
 
     /**
@@ -36,4 +45,35 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function scopeStudent($q)
+    {
+        return $q->where('role', 'student');
+    }
+    public function section()
+    {
+        return $this->belongsTo('App\Models\Section');
+    }
+    public function school()
+    {
+        return $this->belongsTo('App\Models\School');
+    }
+    public function department()
+    {
+        return $this->belongsTo('App\Models\Department','department_id', 'id');
+    }
+    public function studentInfo(){
+        return $this->hasOne('App\Models\StudentInfo','student_id');
+    }
+    public function studentBoardExam(){
+        return $this->hasMany('App\Models\StudentBoardExam','student_id');
+    }
+    public function notifications(){
+        return $this->hasMany('App\Models\Notification','student_id');
+    }
+
+    public function hasRole(string $role): bool
+    {
+        return $this->role == $role ? true : false;
+    }
 }

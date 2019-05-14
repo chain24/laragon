@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('role');
-            $table->tinyInteger('active');
-            $table->integer('school_id');
+            $table->string('role')->default('');
+            $table->tinyInteger('active')->default('1');
+            $table->integer('school_id')->default('');
             $table->integer('code');//school code Auto generated
             $table->integer('student_code')->unique();//Auto generated
             $table->string('gender')->default('');
@@ -28,9 +28,9 @@ class CreateUsersTable extends Migration
             $table->string('nationality')->default('');
             $table->string('phone_number')->unique()->default('');
             $table->string('address')->default('');
-            $table->text('about');
+            $table->text('about')->default('');
             $table->string('pic_path')->default('');
-            $table->tinyInteger('verified');
+            $table->tinyInteger('verified')->default('');
             $table->integer('section_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
