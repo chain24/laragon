@@ -17,6 +17,7 @@
 6. php artisan db:seed 自动填充表数据
 7. 管理员账号密码 chainsy97@gmail.com/secret
 
+
 #### 使用说明
 
 1. xxxx
