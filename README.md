@@ -1,7 +1,7 @@
 # laragon
 
 #### 介绍
-laravel5.8学习
+基于 Laravel 5.7 开发的开源校园管理系统 
 
 #### 软件架构
 软件架构说明
@@ -9,9 +9,13 @@ laravel5.8学习
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. git clone
+2. composer install 安装依赖
+3. 命令行中使用php artisan key:generate 生成.env
+4. 在.env中配置数据库等信息
+5. php artisan make:migration 创建需要的表
+6. php artisan db:seed 自动填充表数据
+7. 管理员账号密码 chainsy@gmail.com/secret
 
 #### 使用说明
 
