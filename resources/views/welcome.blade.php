@@ -71,10 +71,10 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        <!--关闭注册功能,使用后端分配-->
+                        {{--@if (Route::has('register'))--}}
+                            {{--<a href="{{ route('register') }}">Register</a>--}}
+                        {{--@endif--}}
                     @endauth
                 </div>
             @endif
