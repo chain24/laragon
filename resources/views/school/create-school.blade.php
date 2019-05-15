@@ -3,6 +3,8 @@
 @section('title', 'Manage Schools')
 
 @section('content')
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 <div class="container-fluid">
     <div class="row">
         @if(\Auth::user()->role != 'master')
@@ -29,7 +31,7 @@
                 <div class="panel-body table-responsive">
                     @if(\Auth::user()->role == 'master')
                     @include('layouts.master.create-school-form')
-                    <h2>School List</h2>
+                    <h2>{{ trans('views.school.list') }}</h2>
                     @endif
                     <h4>Manage Departments, Classs, Sections, Student Promotion, Course</h4>
                     <table class="table table-condensed" style="{{(\Auth::user()->role == 'master')?'':'width:800px'}}">
@@ -235,4 +237,6 @@
         </div>
     </div>
 </div>
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
 @endsection
