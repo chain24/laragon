@@ -15,7 +15,7 @@
 4. 在.env中配置数据库等信息
 5. php artisan make:migration 创建需要的表
 6. php artisan db:seed 自动填充表数据
-7. 管理员账号密码 chainsy@gmail.com/secret
+7. 管理员账号密码 chainsy97@gmail.com/secret
 
 #### 使用说明
 
