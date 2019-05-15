@@ -3,8 +3,6 @@
 @section('title', 'Manage Schools')
 
 @section('content')
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 <div class="container-fluid">
     <div class="row">
         @if(\Auth::user()->role != 'master')
@@ -31,28 +29,28 @@
                 <div class="panel-body table-responsive">
                     @if(\Auth::user()->role == 'master')
                     @include('layouts.master.create-school-form')
-                    <h2>{{ trans('views.school.list') }}</h2>
+                    <h2>{{ trans('views.school-createschool-schoollist') }}</h2>
                     @endif
-                    <h4>Manage Departments, Classs, Sections, Student Promotion, Course</h4>
+                    <h4>{{ trans('views.school-createschool-adminlist') }}</h4>
                     <table class="table table-condensed" style="{{(\Auth::user()->role == 'master')?'':'width:800px'}}">
                         <thead>
                         <tr>
                             @if(\Auth::user()->role == 'master')
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Code</th>
-                            <th scope="col">About</th>
+                            <th scope="col">{{__('views.school-createschool-Name')}}</th>
+                            <th scope="col">{{__('views.school-createschool-Code')}}</th>
+                            <th scope="col">{{__('views.school-createschool-About')}}</th>
                             @endif
                             @if(\Auth::user()->role == 'admin')
                             {{--<th scope="col">Theme</th>--}}
-                            <th scope="col">Department</th>
-                            <th scope="col">Classes</th>
+                            <th scope="col">{{__('views.school-createschool-Department')}}</th>
+                            <th scope="col">{{__('views.school-createschool-Classes')}}</th>
                             {{-- <th scope="col">Students</th>
                             <th scope="col">Teachers</th> --}}
                             @endif
                             @if(\Auth::user()->role == 'master')
-                            <th scope="col">+Admin</th>
-                            <th scope="col">View Admins</th>
+                            <th scope="col">+{{__('views.school-createschool-Admin')}}</th>
+                            <th scope="col">{{__('views.school-createschool-View_Admin')}}</th>
                             @endif
                         </tr>
                         </thead>
@@ -118,10 +116,10 @@
                             @endif
                             @if(\Auth::user()->role == 'master')
                             <td>
-                                <a class="btn btn-danger btn-sm" role="button" href="{{url('register/admin/'.$school->id.'/'.$school->code)}}"><small>+ Create Admin</small></a>
+                                <a class="btn btn-danger btn-sm" role="button" href="{{url('register/admin/'.$school->id.'/'.$school->code)}}"><small>+ {{__('views.school-createschool-Create_Admin')}}</small></a>
                             </td>
                             <td>
-                                <a class="btn btn-success btn-sm" role="button" href="{{url('school/admin-list/'.$school->id)}}"><small>View Admins</small></a>
+                                <a class="btn btn-success btn-sm" role="button" href="{{url('school/admin-list/'.$school->id)}}"><small>{{__('views.school-createschool-View_Admin')}}</small></a>
                             </td>
                             @endif
                         </tr>
