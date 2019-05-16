@@ -20,5 +20,11 @@ return [
     'Login'                                     => '登录',
     'Register'                                  => '注册',
     'Dashboard'                                 => '仪表盘',
-    'layouts-home-manageschool'                 => '学校管理'
+    'Name'                                      => '名字',
+    'E-Mail_Address'                            => '邮箱地址',
+    'Phone_Number'                              => '电话号码',
+    'Password'                                  => '密码',
+    'Confirm_Password'                          => '确认密码',
+    'layouts-home-manageschool'                 => '学校管理',
+    'generator_admin'                           => '创建账号'
 ];

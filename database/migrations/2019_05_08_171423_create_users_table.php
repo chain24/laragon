@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('active')->default('1');
             $table->integer('school_id')->default('');
             $table->integer('code');//school code Auto generated
-            $table->integer('student_code')->unique();//Auto generated
+            $table->integer('student_code')->default('');//Auto generated
             $table->string('gender')->default('');
             $table->string('blood_group')->default('');
             $table->string('nationality')->default('');

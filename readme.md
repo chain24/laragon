@@ -15,12 +15,11 @@
 4. 在.env中配置数据库等信息
 5. php artisan make:migration 创建需要的表
 6. php artisan db:seed 自动填充表数据
-7. 管理员账号密码 chainsy97@gmail.com/secret
 
 
 #### 使用说明
 
-1. xxxx
+1. master账号密码 chainsy97@gmail.com/secret（master 级别账户仅限于管理学校和管理员，具体某个学校的系统管理需要通过学校的管理员来操作）
 2. xxxx
 3. xxxx
 
