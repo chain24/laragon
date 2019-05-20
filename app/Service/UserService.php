@@ -13,6 +13,7 @@ namespace App\Service;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Mavinoo\LaravelBatch\Batch;
 
 
 class UserService {
@@ -181,7 +182,7 @@ class UserService {
         $tb->school_id = session('register_school_id');
         $tb->code = session('register_school_code');
         $tb->student_code = session('register_school_id').date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
-        $tb->gender = $request->gender;
+        $tb->gender = (!empty($request->gender)) ? $request->gender : 'male';
         $tb->blood_group = $request->blood_group;
         $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
@@ -190,27 +191,37 @@ class UserService {
         $tb->save();
         return $tb;
     }
+
+    private function checkEmailUnique($email){
+        return $this->user->where('email',$email)->where('active',1)->first();
+    }
+
     public function storeStudent($request){
-        $tb = new $this->user;
-        $tb->name = $request->name;
-        $tb->email = (!empty($request->email)) ? $request->email : '';
-        $tb->password = bcrypt($request->password);
-        $tb->role = 'student';
-        $tb->active = 1;
-        $tb->school_id = auth()->user()->school_id;
-        $tb->code = auth()->user()->code;// School Code
-        $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
-        $tb->gender = $request->gender;
-        $tb->blood_group = $request->blood_group;
-        $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
-        $tb->phone_number = $request->phone_number;
-        $tb->address = (!empty($request->address)) ? $request->address : '';
-        $tb->about = (!empty($request->about)) ? $request->about : '';
-        $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
-        $tb->verified = 1;
-        $tb->section_id = $request->section;
-        $tb->save();
-        return $tb;
+        if ($this->checkEmailUnique($request->email)){
+            throw new \Exception('邮箱已被占用');
+        }else{
+            $tb = new $this->user;
+            $tb->name = $request->name;
+            $tb->email = (!empty($request->email)) ? $request->email : '';
+            $tb->password = bcrypt($request->password);
+            $tb->role = 'student';
+            $tb->active = 1;
+            $tb->school_id = auth()->user()->school_id;
+            $tb->code = auth()->user()->code;// School Code
+            $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
+            $tb->gender = $request->gender;
+            $tb->blood_group = $request->blood_group;
+            $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+            $tb->phone_number = $request->phone_number;
+            $tb->address = (!empty($request->address)) ? $request->address : '';
+            $tb->about = (!empty($request->about)) ? $request->about : '';
+            $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
+            $tb->verified = 1;
+            $tb->section_id = $request->section;
+            $tb->save();
+            return $tb;
+        }
+
     }
     public function storeStaff($request, $role){
         $tb = new $this->user;

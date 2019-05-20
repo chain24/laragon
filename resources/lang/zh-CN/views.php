@@ -26,5 +26,6 @@ return [
     'Password'                                  => '密码',
     'Confirm_Password'                          => '确认密码',
     'layouts-home-manageschool'                 => '学校管理',
-    'generator_admin'                           => '创建账号'
+    'generator_admin'                           => '创建账号',
+    'email_duplicate'                           => '邮箱被占用',
 ];

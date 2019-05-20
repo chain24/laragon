@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\UserRegistered;
+use App\Mail\SendWelcomeEmailToUser;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;

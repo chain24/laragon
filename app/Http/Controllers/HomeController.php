@@ -28,7 +28,7 @@ class HomeController extends Controller
         if (Auth::user()->role == 'master'){
             //管理员用户登录
             return view('master-home');
-        }die;
+        }
         return view('home');
     }
 }
