@@ -19,8 +19,12 @@ class UserTableSeeder extends Seeder
             'role'     => 'master',
             'active'   => 1,
             'verified' => 1,
-            'phone_code'=> '12345678909',
+            'phone_number'=> '12345678909',
             'student_code'=>'123456',
+            'school_id'   => 0,
+            'code'        => '1256789',
+            'about'       => 'this is master',
+            'section_id'  => 0
         ]);
         factory(\App\User::class, 10)->states('admin')->create();
         factory(\App\User::class, 10)->states('accountant')->create();

@@ -38,7 +38,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');//禁止注册账号
+        $this->middleware('auth');//未登录禁止注册账号
     }
 
     /**

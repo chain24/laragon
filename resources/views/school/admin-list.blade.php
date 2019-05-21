@@ -38,9 +38,7 @@
                                         <td>
                                             @if($admin->active == 0)
                                                 <a href="{{url('master/activate-admin/'.$admin->id)}}" class="btn btn-xs btn-success"
-                                                   role="button"><i class="material-icons">
-                                                        done
-                                                    </i>{{__('views.adminlist_Activate')}}</a>
+                                                   role="button"><span class="glyphicon glyphicon-ok"> {{__('views.adminlist_Activate')}}</span></a>
                                             @else
                                                 <a href="{{url('master/deactivate-admin/'.$admin->id)}}" class="btn btn-xs btn-danger"
                                                    role="button"> <span class="glyphicon glyphicon-trash"> {{__('views.adminlist_Deactivate')}}</span></a>

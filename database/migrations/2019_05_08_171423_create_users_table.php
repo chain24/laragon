@@ -14,26 +14,26 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('role')->default('');
-            $table->tinyInteger('active')->default('1');
-            $table->integer('school_id')->default('');
-            $table->integer('code');//school code Auto generated
-            $table->integer('student_code')->default('');//Auto generated
-            $table->string('gender')->default('');
-            $table->string('blood_group')->default('');
-            $table->string('nationality')->default('');
-            $table->string('phone_number')->unique()->default('');
-            $table->string('address')->default('');
-            $table->text('about')->default('');
-            $table->string('pic_path')->default('');
-            $table->tinyInteger('verified')->default('');
-            $table->integer('section_id')->unsigned();
-            $table->rememberToken();
-            $table->timestamps();
+                $table->increments('id');
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->string('password');
+                $table->string('role');
+                $table->tinyInteger('active');
+                $table->integer('school_id');
+                $table->integer('code');//school code Auto generated
+                $table->integer('student_code')->unique();//Auto generated
+                $table->string('gender')->default('');
+                $table->string('blood_group')->default('');
+                $table->string('nationality')->default('');
+                $table->string('phone_number')->unique()->default('');
+                $table->string('address')->default('');
+                $table->text('about')->nullable('');
+                $table->string('pic_path')->default('');
+                $table->tinyInteger('verified');
+                $table->integer('section_id')->unsigned();
+                $table->rememberToken();
+                $table->timestamps();
         });
     }
 

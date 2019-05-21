@@ -5,7 +5,7 @@ namespace App\Models;
 
 class StudentInfo extends Model
 {
-    protected $table = 'student_infos';
+    protected $table = 'students_info';
 
     protected $fillable = ['student_id'];
 
