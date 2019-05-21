@@ -74,7 +74,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @guest
-                        <li><a href="{{ route('login') }}" style="color: #000;">Login</a></li>
+                        <li><a href="{{ route('login') }}" style="color: #000;">{{__('views.Login')}}</a></li>
                     @else
                         @if(\Auth::user()->role == 'student')
                             <li class="nav-item">
@@ -82,7 +82,7 @@
                                    role="button">
                                     <i class="material-icons text-muted">email</i>
                                     <?php
-                                    $mc = \App\Notification::where('student_id',\Auth::user()->id)->where('active',1)->count();
+                                    $mc = \App\Models\Notification::where('student_id',\Auth::user()->id)->where('active',1)->count();
                                     ?>
                                     @if($mc > 0)
                                         <span class="label label-danger" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">{{$mc}}</span>
@@ -101,10 +101,10 @@
                                          style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">
                                 @else
                                     @if(strtolower(Auth::user()->gender) == 'male')
-                                        <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/200/000000/user.png"
+                                        <img src="{{asset('01-progress.gif')}}" data-src="{{asset('img/user.png')}}"
                                              alt="Profile Picture" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">
                                     @else
-                                        <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/200/000000/user-female.png"
+                                        <img src="{{asset('01-progress.gif')}}" data-src="{{asset('img/user-female.png')}}"
                                              alt="Profile Picture" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">
                                     @endif
                                 @endif
@@ -150,7 +150,7 @@
 <!-- Latest compiled and minified CSS -->
 {{--
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}" id="bootstrap-print-id"> --}}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+<link rel="stylesheet" href="{{asset('css/bootstrap-css/bootstrap.min.css')}}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous" id="bootstrap-print-id">
 <link href="{{asset('css/flatly.bootstrap-3.3.7.min.css') }}" rel="stylesheet" id="bootswatch-print-id">
 <link href="{{asset('css/dataTables-1.10.16.bootstrap.min.css') }}" rel="stylesheet">
@@ -377,7 +377,7 @@
     }
 </style>
 <!-- Scripts -->
-<script src="{{ asset('jsbootstrap-js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/bootstrap-js/bootstrap.js') }}"></script>
 <script src="{{ asset('js/dataTables-1.10.16.min.js') }}"></script>
 <script src="{{ asset('js/dataTables-1.10.16.bootstrap.min.js') }}"></script>
 

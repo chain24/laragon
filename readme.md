@@ -20,7 +20,7 @@
 #### 使用说明
 
 1. master账号密码 chainsy97@gmail.com/secret（master 级别账户仅限于管理学校和管理员，具体某个学校的系统管理需要通过学校的管理员来操作）
-2. xxxx
+2. migration出现错误，my.ini 中 修改成为sql-mode="NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
 3. xxxx
 
 #### 参与贡献
