@@ -24,7 +24,8 @@ class UserTableSeeder extends Seeder
             'school_id'   => 0,
             'code'        => '1256789',
             'about'       => 'this is master',
-            'section_id'  => 0
+            'section_id'  => 0,
+            'gender'      => 'male',
         ]);
         factory(\App\User::class, 10)->states('admin')->create();
         factory(\App\User::class, 10)->states('accountant')->create();
