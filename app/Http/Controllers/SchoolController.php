@@ -44,4 +44,15 @@ class SchoolController extends Controller
         $tb->save();
         return back()->with('status', 'Created');
     }
+
+    /**
+     * @author wuzq
+     * @param $school_id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($school_id)
+    {
+        $admins = User::bySchool($school_id)->where('role','admin')->get();
+        return view('school.admin-list',compact('admins'));
+    }
 }
