@@ -57,3 +57,18 @@ Route::middleware(['auth','master.admin'])->group(function (){
 // 		return $pdf->stream('result.pdf');
 //   });
 });
+
+Route::middleware(['auth'])->group(function (){
+    if (config('app.env') != 'production') {
+        Route::get('user/config/impersonate', 'UserController@impersonateGet');
+        Route::post('user/config/impersonate', 'UserController@impersonate');
+    }
+    Route::get('users/{school_code}/{student_code}/{teacher_code}', 'UserController@index');
+    Route::get('users/{school_code}/{role}', 'UserController@indexOther');
+    Route::get('user/{user_code}', 'UserController@show');
+    Route::get('user/config/change_password', 'UserController@changePasswordGet');
+    Route::post('user/config/change_password', 'UserController@changePasswordPost');
+    Route::get('section/students/{section_id}', 'UserController@sectionStudents');
+
+    Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
+});

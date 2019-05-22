@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') - {{ (Auth::check() && (Auth::user()->role == 'student' || Auth::user()->role == 'teacher'
+    <title>@yield('title') {{ (Auth::check() && (Auth::user()->role == 'student' || Auth::user()->role == 'teacher'
         || Auth::user()->role == 'admin' || Auth::user()->role == 'accountant' || Auth::user()->role ==
         'librarian'))?Auth::user()->school->name:config('app.name') }}</title>
     <style>
@@ -118,7 +118,7 @@
                                     </li>
                                 @endif
                                 <li>
-                                    <a href="{{url('user/config/change_password')}}">Change Password</a>
+                                    <a href="{{url('user/config/change_password')}}">{{__('views.Change_Password')}}</a>
                                 </li>
                                 @if(env('APP_ENV') != 'production')
                                     <li>
@@ -130,7 +130,7 @@
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                        Logout
+                                        {{__('views.Logout')}}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -275,7 +275,7 @@
         font-family: 'Material Icons';
         font-style: normal;
         font-weight: 400;
-        src: url('{{asset('css/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2')}}') format('woff2');
+        src: url('{{asset('fonts/glyphicons-halflings-regular.woff2')}}') format('woff2');
     }
 
     .material-icons {
@@ -377,6 +377,7 @@
     }
 </style>
 <!-- Scripts -->
+<script src="{{ asset('js/moment.js') }}"></script>
 <script src="{{ asset('js/bootstrap-js/bootstrap.js') }}"></script>
 <script src="{{ asset('js/dataTables-1.10.16.min.js') }}"></script>
 <script src="{{ asset('js/dataTables-1.10.16.bootstrap.min.js') }}"></script>

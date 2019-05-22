@@ -172,7 +172,39 @@ class UserService {
             ->where('active', 1)
             ->first();
     }
+    private function checkPhoneUnique($phone){
+        $user = $this->user->where('phone_number', $phone)
+            ->where('active', 1)
+            ->get();
+        if ( $user ) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * store school admin
+     * @author wuzq
+     * @param $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function storeAdmin($request){
+        if ($this->checkPhoneUnique($request->phone)){
+            return response()->json([
+                'code'   => 9,
+                'msg'    => trans('views.phone_duplicate'),
+                'data'   => 'phone'
+            ]);
+        }
+
+        if ($this->checkEmailUnique($request->email)){
+            return response()->json([
+                    'code'   => 9,
+                    'msg'    => trans('views.email_duplicate'),
+                    'data'   => 'email'
+            ]);
+        }
         $tb = new $this->user;
         $tb->name = $request->name;
         $tb->email = $request->email;
@@ -183,13 +215,18 @@ class UserService {
         $tb->code = session('register_school_code');
         $tb->student_code = session('register_school_id').date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = (!empty($request->gender)) ? $request->gender : 'male';
-        $tb->blood_group = $request->blood_group;
+        $tb->blood_group = (!empty($request->blood_group)) ? $request->blood_group : 'o+';
         $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
-        $tb->phone_number = $request->phone_number;
+        $tb->phone_number = $request->phone;
         $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
         $tb->verified = 1;
+        $tb->section_id = (!empty($request->section_id)) ? $request->section_id : 1;
         $tb->save();
-        return $tb;
+        return response()->json([
+            'code'   => 1,
+            'msg'    => '',
+            'data'   => $tb
+        ]);
     }
 
     private function checkEmailUnique($email){

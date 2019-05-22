@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Events\UserRegistered;
+use App\Http\Requests\ChangePasswordRequest;
 use App\Models\Department;
 use App\Models\Myclass;
 use App\Models\Section;
 use App\Service\UserService;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -30,14 +32,15 @@ class UserController extends Controller
     public function storeAdmin(Request $request)
     {
         $password = $request->password;
-        try{
-            $tb = $this->userService->storeAdmin($request);
-
-        }catch(\Exception $exception){
-            return back()->withErrors(['email' => trans('views.email_duplicate')])->withInput();
+        $tb = $this->userService->storeAdmin($request);
+        $responseData = $tb->getData();
+        if ($responseData->code == 9){
+            return back()->withErrors([$responseData->data => $responseData->msg])->withInput();
+        }else{
+            event(new UserRegistered($tb, $password));
+            return redirect('/create-school');
         }
-        event(new UserRegistered($tb, $password));
-        return redirect('/create-school');
+
     }
 
     /**
@@ -108,4 +111,32 @@ class UserController extends Controller
     {
 
     }
+
+    /**
+     * 修改密码页面
+     * @author wuzq
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function changePasswordGet()
+    {
+        return view('profile.change-password');
+    }
+
+    public function changePasswordPost(ChangePasswordRequest $request)
+    {
+        if (Hash::check($request->old_password, \Auth::user()->password)) {
+            $request->user()->fill([
+                'password' => Hash::make($request->new_password),
+            ])->save();
+            \Auth::logout();
+            return redirect('login');
+        }
+        return back()->with('error-status', trans('views.change-password-notmatch'));
+    }
+
+    public function resetPasswordGet()
+    {
+        return view('auth.passwords.reset');
+    }
+
 }

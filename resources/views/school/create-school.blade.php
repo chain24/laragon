@@ -235,6 +235,6 @@
         </div>
     </div>
 </div>
-    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{asset('js/bootstrap-datetimepicker-master/bootstrap-datetimepicker.min.js')}}"></script>
 
 @endsection
