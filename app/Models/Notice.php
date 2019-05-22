@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-class Routine extends Model
+class Notice extends Model
 {
-    public function section()
-    {
-        return $this->belongsTo('App\Models\Section');
-    }
-
+    /**
+     * Get the school record associated with the user.
+     */
     public function school()
     {
         return $this->belongsTo('App\Models\School');

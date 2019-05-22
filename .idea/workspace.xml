@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19c7a2c6-e1b1-445f-87dd-b43274160ae9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/factories/RoutineFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RoutineTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Notice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/NoticeFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_05_22_174331_create_notices_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/NoticeTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_22_160049_create_syllabuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_22_160049_create_syllabuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Exam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Routine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Routine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Syllabus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Syllabus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,20 +150,20 @@
           <entry key="json" value="3" />
           <entry key="log" value="4" />
           <entry key="md" value="6" />
-          <entry key="php" value="226" />
+          <entry key="php" value="241" />
           <entry key="vue" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="12" />
-          <entry key="Blade" value="61" />
+          <entry key="Blade" value="63" />
           <entry key="CSS" value="1" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="4" />
           <entry key="Log" value="4" />
           <entry key="Markdown" value="6" />
-          <entry key="PHP" value="165" />
+          <entry key="PHP" value="178" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Vue.js" value="1" />
         </counts>
@@ -165,8 +175,8 @@
           <entry key="example" value="24" />
           <entry key="log" value="63" />
           <entry key="md" value="332" />
-          <entry key="php" value="7386" />
-          <entry key="txt" value="192" />
+          <entry key="php" value="7600" />
+          <entry key="txt" value="201" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -175,8 +185,8 @@
           <entry key="Blade" value="1882" />
           <entry key="Log" value="63" />
           <entry key="Markdown" value="332" />
-          <entry key="PHP" value="5504" />
-          <entry key="PLAIN_TEXT" value="193" />
+          <entry key="PHP" value="5718" />
+          <entry key="PLAIN_TEXT" value="202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -194,73 +204,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/ExamFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-              <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/SyllabusSeederTable.php">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/SyllabusFactory.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Notice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_160049_create_syllabuses_table.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Routine.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_155808_create_routines_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/RoutineFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/RoutineTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+            <state relative-caret-position="76">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -268,29 +233,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Syllabus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="133">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/EventFactory.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Exam.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="152">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
               <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+              <folding>
+                <element signature="e#558#582#0#HTML" expanded="true" />
+                <element signature="e#2768#2816#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/ExamSeederTable.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Section.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="54" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="54" />
+            <state relative-caret-position="399">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Book.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -325,16 +330,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/school/admin-list.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Model.php" />
-        <option value="$PROJECT_DIR$/app/Models/Myclass.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Department.php" />
-        <option value="$PROJECT_DIR$/database/factories/StudentinfoFactory.php" />
-        <option value="$PROJECT_DIR$/app/Models/StudentInfo.php" />
-        <option value="$PROJECT_DIR$/database/seeds/StudentsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_05_21_143934_create_students_info_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_05_08_171423_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Notification.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_21_154937_create_notifications_table.php" />
         <option value="$PROJECT_DIR$/database/factories/NotificationFactory.php" />
@@ -356,7 +351,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/leftside-menubar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_155637_create_exams_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_155750_create_events_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_155808_create_routines_table.php" />
@@ -366,16 +360,27 @@
         <option value="$PROJECT_DIR$/database/seeds/ExamSeederTable.php" />
         <option value="$PROJECT_DIR$/database/seeds/EventSeederTable.php" />
         <option value="$PROJECT_DIR$/database/seeds/SyllabusSeederTable.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_10_094128_create_books_table.php" />
         <option value="$PROJECT_DIR$/database/factories/BookFactory.php" />
         <option value="$PROJECT_DIR$/database/factories/ExamFactory.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_171028_add_colums_to_exam_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_171028_add_colums_to_exams_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Syllabus.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_22_160049_create_syllabuses_table.php" />
         <option value="$PROJECT_DIR$/database/factories/RoutineFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/RoutineTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_22_174331_create_notices_table.php" />
+        <option value="$PROJECT_DIR$/database/factories/NoticeFactory.php" />
+        <option value="$PROJECT_DIR$/database/seeds/NoticeTableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Models/Event.php" />
+        <option value="$PROJECT_DIR$/app/Models/Notice.php" />
+        <option value="$PROJECT_DIR$/app/Models/Section.php" />
+        <option value="$PROJECT_DIR$/app/Models/Book.php" />
+        <option value="$PROJECT_DIR$/app/Models/Routine.php" />
+        <option value="$PROJECT_DIR$/app/Models/Syllabus.php" />
+        <option value="$PROJECT_DIR$/app/Models/Exam.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
       </list>
     </option>
   </component>
@@ -545,19 +550,13 @@
             <path>
               <item name="laragon" type="b2602c69:ProjectViewProjectNode" />
               <item name="laragon" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laragon" type="b2602c69:ProjectViewProjectNode" />
               <item name="laragon" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laragon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laragon" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -567,7 +566,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/views/profile/edit.blade.php&#10;web&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/routes/web.php&#10;edit&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/views/profile/edit.blade.php&#10;app&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/views/layouts/app.blade.php&#10;User&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/UserController.php&#10;seeder&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/database/seeds/UserTableSeeder.php&#10;factory&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/database/factories/UserFactory.php&#10;db&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/public/css/dataTables-1.10.16.bootstrap.min.css&#10;views&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/lang/zh-CN/views.php&#10;user&#9;null&#9;null&#10;schoolC&#9;null&#9;null&#10;.env&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/.env&#10;re&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/Auth/RegisterController.php&#10;pro&#9;null&#9;null&#10;UserC&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/UserController.php&#10;Validator&#9;null&#9;null&#10;RegistersUsers&#9;null&#9;null&#10;SchoolC&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/app/Http/Controllers/SchoolController.php&#10;seed&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/database/seeds/UserTableSeeder.php&#10;Authenticate&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/project/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php&#10; RegistersUsers&#9;null&#9;null&#10;Illuminate\Routing&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/project/vendor/laravel/framework/src/Illuminate/Routing&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;\Illuminate\Routing\Route&#9;null&#9;null&#10;Illuminate\Support\Facades\Route&#9;null&#9;null&#10;Route&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="noti&#9;null&#9;null&#10;home&#9;null&#9;null&#10;web&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/routes/web.php&#10;edit&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/views/profile/edit.blade.php&#10;app&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/views/layouts/app.blade.php&#10;User&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/UserController.php&#10;seeder&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/database/seeds/UserTableSeeder.php&#10;factory&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/database/factories/UserFactory.php&#10;db&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/public/css/dataTables-1.10.16.bootstrap.min.css&#10;views&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/resources/lang/zh-CN/views.php&#10;user&#9;null&#9;null&#10;schoolC&#9;null&#9;null&#10;.env&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/.env&#10;re&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/Auth/RegisterController.php&#10;pro&#9;null&#9;null&#10;UserC&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/laragon/app/Http/Controllers/UserController.php&#10;Validator&#9;null&#9;null&#10;RegistersUsers&#9;null&#9;null&#10;SchoolC&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/app/Http/Controllers/SchoolController.php&#10;seed&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/database/seeds/UserTableSeeder.php&#10;Authenticate&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/project/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php&#10; RegistersUsers&#9;null&#9;null&#10;Illuminate\Routing&#9;FILE&#9;file://D:/phpStudy/PHPTutorial/WWW/laragon/project/vendor/laravel/framework/src/Illuminate/Routing&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;\Illuminate\Routing\Route&#9;null&#9;null&#10;Illuminate\Support\Facades\Route&#9;null&#9;null&#10;Route&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -617,7 +616,7 @@
       <workItem from="1558054679543" duration="592000" />
       <workItem from="1558315243621" duration="24779000" />
       <workItem from="1558400417395" duration="26002000" />
-      <workItem from="1558486973778" duration="24614000" />
+      <workItem from="1558486973778" duration="26725000" />
     </task>
     <task id="LOCAL-00001" summary="how to install">
       <created>1557389954643</created>
@@ -843,11 +842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558517122021</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="表的创建和填充数据">
+      <created>1558517782349</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1558517782349</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164588000" />
+    <option name="totallyTimeSpent" value="166699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -913,7 +919,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/laragon" />
     </ignored-roots>
-    <MESSAGE value="增加create-school控制器路由" />
     <MESSAGE value="seeder migrate factory的使用" />
     <MESSAGE value="创建学校" />
     <MESSAGE value="创建控制器" />
@@ -938,46 +943,10 @@
     <MESSAGE value="添加修改密码功能" />
     <MESSAGE value="创建表迁移表填充表数据" />
     <MESSAGE value="填写表名" />
-    <option name="LAST_COMMIT_MESSAGE" value="填写表名" />
+    <MESSAGE value="表的创建和填充数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="表的创建和填充数据" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1122,19 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Event.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Issuedbook.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1173,31 +1129,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_10_094128_create_books_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -1222,61 +1157,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/EventFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/ExamSeederTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_171028_add_colums_to_exams_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ExamFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/SyllabusSeederTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Syllabus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/SyllabusFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,8 +1190,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/RoutineTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ExamSeederTable.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/EventFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#7#36#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/SyllabusFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#7#36#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/SyllabusSeederTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ExamFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#7#36#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_174331_create_notices_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/NoticeFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#7#36#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/NoticeTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Notice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Section.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Routine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Syllabus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="e#558#582#0#HTML" expanded="true" />
+            <element signature="e#2768#2816#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

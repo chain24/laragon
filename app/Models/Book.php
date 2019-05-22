@@ -15,7 +15,7 @@ class Book extends Model
         return $this->belongsTo('App\Models\School');
     }
     public function class() {
-        return $this->belongsTo('App\Modles\Myclass');
+        return $this->belongsTo('App\Models\Myclass');
     }
     public function user() {
         return $this->belongsTo('App\User');

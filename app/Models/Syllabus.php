@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 
 class Syllabus extends Model
 {
-    protected $table = 'syllabuses';
+    protected $table = 'syllabuses';//教学大纲
 }

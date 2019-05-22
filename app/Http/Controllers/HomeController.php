@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Exam;
 use App\Models\Myclass;
+use App\Models\Routine;
 use App\Models\Section;
 use App\Models\Syllabus;
 use App\User;
+use App\Models\Notice;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -64,17 +67,17 @@ class HomeController extends Controller
                 return Section::whereIn('class_id', $classes)->count();
             });
             $notices = \Cache::remember('notices-'.$school_id, $minutes, function () use($school_id) {
-                return \App\Notice::bySchool($school_id)
+                return Notice::bySchool($school_id)
                     ->where('active',1)
                     ->get();
             });
             $events = \Cache::remember('events-'.$school_id, $minutes, function () use($school_id) {
-                return \App\Event::bySchool($school_id)
+                return Event::bySchool($school_id)
                     ->where('active',1)
                     ->get();
             });
             $routines = \Cache::remember('routines-'.$school_id, $minutes, function () use($school_id) {
-                return \App\Routine::bySchool($school_id)
+                return Routine::bySchool($school_id)
                     ->where('active',1)
                     ->get();
             });
