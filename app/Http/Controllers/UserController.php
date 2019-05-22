@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\UserRegistered;
 use App\Http\Requests\ChangePasswordRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\Department;
 use App\Models\Myclass;
 use App\Models\Section;
@@ -11,6 +12,7 @@ use App\Service\UserService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -107,9 +109,34 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(Request $request)
+    public function update(UpdateUserRequest $request)
     {
+        \DB::transaction(function () use ($request) {
+            $tb = $this->user->find($request->user_id);
+            $tb->name = $request->name;
+            $tb->email = (!empty($request->email)) ? $request->email : '';
+            $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+            $tb->phone_number = $request->phone_number;
+            $tb->address = (!empty($request->address)) ? $request->address : '';
+            $tb->about = (!empty($request->about)) ? $request->about : '';
+            $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
+            if ($request->user_role == 'teacher') {
+                $tb->department_id = $request->department_id;
+                $tb->section_id = $request->class_teacher_section_id;
+            }
+            if ($tb->save()) {
+                if ($request->user_role == 'student') {
 
+                    try{
+                        // Fire event to store Student information
+                        event(new StudentInfoUpdateRequested($request,$tb->id));
+                    } catch(\Exception $ex) {
+                        Log::info('Failed to update Student information, Id: '.$tb->id. 'err:'.$ex->getMessage());
+                    }
+                }
+            }
+        });
+        return back()->with('status',trans('views.edit_update_Saved'));
     }
 
     /**

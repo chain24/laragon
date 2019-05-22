@@ -34,7 +34,7 @@
                             <input type="hidden" name="user_id" value="{{$user->id}}">
                             <input type="hidden" name="user_role" value="{{$user->role}}">
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Full Name</label>
+                                <label for="name" class="col-md-4 control-label">{{__('views.admin-edit-fullName')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name" value="{{ $user->name }}"
@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">{{__('views.E-Mail_Address')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control" name="email"
@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('phone_number') ? ' has-error' : '' }}">
-                                <label for="phone_number" class="col-md-4 control-label">Phone Number</label>
+                                <label for="phone_number" class="col-md-4 control-label">{{__('views.Phone_Number')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="phone_number" type="text" class="form-control" name="phone_number"
@@ -80,7 +80,7 @@
 
                             @if($user->role == 'teacher')
                                 <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
-                                    <label for="department" class="col-md-4 control-label">Department</label>
+                                    <label for="department" class="col-md-4 control-label">{{__('views.Department')}}</label>
 
                                     <div class="col-md-6">
                                         <select id="department" class="form-control" name="department_id">
@@ -122,7 +122,7 @@
                             @endif
 
                             <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                                <label for="address" class="col-md-4 control-label">address</label>
+                                <label for="address" class="col-md-4 control-label">{{__('views.Address')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="address" type="text" class="form-control" name="address"
@@ -137,7 +137,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('about') ? ' has-error' : '' }}">
-                                <label for="about" class="col-md-4 control-label">About</label>
+                                <label for="about" class="col-md-4 control-label">{{__('views.About')}}</label>
 
                                 <div class="col-md-6">
                                     <textarea id="about" class="form-control" name="about">{{ $user->about }}</textarea>
@@ -397,20 +397,20 @@
     </div>
     <link href="{{asset('css/bootstrap-datetimepicker-master/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
 
-    <script src="{{asset('js/bootstrap-datetimepicker-master/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-datetimepicker-master/bootstrap-datetimepicker.min.js')}}"></script>
     <script>
         $(function () {
-            $('#birthday').datepicker({
+            $('#birthday').datetimepicker({
                 format: "yyyy-mm-dd",
             });
-            $('#birthday').datepicker('setDate',
+            $('#birthday').datetimepicker('setDate',
                 "{{ Carbon\Carbon::parse($user->studentInfo['birthday'])->format('Y-d-m') }}");
-            $('#session').datepicker({
+            $('#session').datetimepicker({
                 format: "yyyy",
                 viewMode: "years",
                 minViewMode: "years"
             });
-            $('#session').datepicker('setDate',
+            $('#session').datetimepicker('setDate',
                 "{{ Carbon\Carbon::parse($user->studentInfo['session'])->format('Y') }}");
         });
     </script>

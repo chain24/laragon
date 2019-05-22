@@ -16,5 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SectionTableSeeder::class);
         $this->call(ClassesTableSeeder::class);
         $this->call(StudentsTableSeeder::class);
+        $this->call(BookSeederTable::class);
+        $this->call(ExamSeederTable::class);
+        $this->call(EventSeederTable::class);
+        $this->call(SyllabusSeederTable::class);
     }
 }

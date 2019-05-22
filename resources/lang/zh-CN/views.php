@@ -58,4 +58,11 @@ return [
     'change-password-notmatch'                  => '输入的原密码不正确',
     'forget_password'                           => '忘记密码？',
     'remember_me'                               => '记住登录状态',
+    'Department'                                => '部门',
+    'Address'                                   => '地址',
+    'About'                                     => '简介',
+    'edit_update_Saved'                         => '修改成功',
+    'unauthorized_access'                       => '非法访问',
+    'title'                                     => '标题',
+    'click_here'                                => '如果您的浏览器没有自动跳转，请点击这里',
 ];
