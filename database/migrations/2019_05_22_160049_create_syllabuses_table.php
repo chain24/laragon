@@ -20,6 +20,7 @@ class CreateSyllabusesTable extends Migration
             $table->text('description');
             $table->tinyInteger('active');
             $table->integer('school_id')->unsigned();
+            $table->integer('class_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
