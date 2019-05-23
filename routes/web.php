@@ -72,3 +72,15 @@ Route::middleware(['auth'])->group(function (){
 
     Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
 });
+
+Route::middleware(['auth', 'librarian'])->namespace('Library')->group(function () {
+    Route::prefix('library')->name('library.')->group(function () {
+        Route::resource('books', 'BookController');
+    });
+});
+Route::middleware(['auth','librarian'])->prefix('library')->name('library.issued-books.')->group(function () {
+    Route::get('issue-books', 'IssuedbookController@create')->name('create');
+    Route::post('issue-books', 'IssuedbookController@store')->name('store');
+    Route::get('issued-books', 'IssuedbookController@index')->name('index');
+    Route::post('save_as_returned', 'IssuedbookController@update');
+});
