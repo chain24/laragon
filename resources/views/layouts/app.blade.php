@@ -276,7 +276,7 @@
         font-family: 'Material Icons';
         font-style: normal;
         font-weight: 400;
-        src: url('{{asset('fonts/glyphicons-halflings-regular.woff2')}}') format('woff2');
+        src: url('{{asset('css/fonts/glyphicons-halflings-regular.woff2')}}') format('woff2');
     }
 
     .material-icons {
