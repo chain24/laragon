@@ -15,8 +15,8 @@
     <style>
         .loader {
             position: fixed;
-            left: 0px;
-            top: 0px;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
             z-index: 999999;
@@ -154,7 +154,8 @@
       crossorigin="anonymous" id="bootstrap-print-id">
 <link href="{{asset('css/flatly.bootstrap-3.3.7.min.css') }}" rel="stylesheet" id="bootswatch-print-id">
 <link href="{{asset('css/dataTables-1.10.16.bootstrap.min.css') }}" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <style>
     .navbar-default .navbar-toggle .icon-bar {
         background-color: #888;
