@@ -149,6 +149,12 @@ class UserController extends Controller
         return view('profile.change-password');
     }
 
+    /**
+     * 保存密码的操作
+     * @author wuzq
+     * @param ChangePasswordRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function changePasswordPost(ChangePasswordRequest $request)
     {
         if (Hash::check($request->old_password, \Auth::user()->password)) {
@@ -161,9 +167,26 @@ class UserController extends Controller
         return back()->with('error-status', trans('views.change-password-notmatch'));
     }
 
+    /**
+     * 重置密码页面
+     * @author wuzq
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function resetPasswordGet()
     {
         return view('auth.passwords.reset');
+    }
+
+    public function index($school_code,$student_code,$teacher_code)
+    {
+        session()->forget('section-attendance');
+
+        if($this->userService->isListOfStudents($school_code, $student_code))
+            return $this->userService->indexView('list.student-list', $this->userService->getStudents());
+        else if($this->userService->isListOfTeachers($school_code, $teacher_code))
+            return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers());
+        else
+            return view('home');
     }
 
 }
