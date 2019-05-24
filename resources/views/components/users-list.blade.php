@@ -67,9 +67,9 @@
                             <img src="{{asset('01-progress.gif')}}" data-src="{{url($user->pic_path)}}" style="border-radius: 50%;" width="25px" height="25px">
                         @else
                             @if(strtolower($user->gender) == 'male')
-                                <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/50/000000/user.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+                                <img src="{{asset('01-progress.gif')}}" data-src="{{asset('img/user.png')}}" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
                             @else
-                                <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/50/000000/user-female.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+                                <img src="{{asset('01-progress.gif')}}" data-src="{{asset('img/user-female.png')}}" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
                             @endif
                         @endif
                         <a href="{{url('user/'.$user->student_code)}}">
