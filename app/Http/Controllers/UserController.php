@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\UserRegistered;
 use App\Http\Requests\ChangePasswordRequest;
+use App\Http\Requests\ImpersonateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\Department;
 use App\Models\Myclass;
@@ -187,6 +188,32 @@ class UserController extends Controller
             return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers());
         else
             return view('home');
+    }
+
+    public function impersonateGet()
+    {
+        if (app('impersonate')->isImpersonating()) {
+            \Auth::user()->leaveImpersonation();
+            return redirect('/home');
+        }
+        else {
+            return view('profile.impersonate', [
+                'other_users' => $this->user->where('id', '!=', auth()->id())->get([ 'id', 'name', 'role' ])
+            ]);
+        }
+    }
+
+    public function impersonate(ImpersonateUserRequest $request)
+    {
+        $user = $this->user->find($request->id);
+        \Auth::user()->impersonate($user);
+        return redirect('/home');
+    }
+
+    public function show($user_code)
+    {
+        $user = $this->userService->getUserByUserCode($user_code);
+        return view('profile.user', compact('user'));
     }
 
 }
