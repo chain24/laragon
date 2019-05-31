@@ -123,7 +123,7 @@
                                 @if(env('APP_ENV') != 'production')
                                     <li>
                                         <a href="{{url('user/config/impersonate')}}">
-                                            {{ app('impersonate')->isImpersonating() ? 'Leave Impersonation' : 'Impersonate' }}
+                                            {{ app('impersonate')->isImpersonating() ? __('views.Leave_Impersonation') : __('views.Impersonate') }}
                                         </a>
                                     </li>
                                 @endif

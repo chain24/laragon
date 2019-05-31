@@ -65,4 +65,6 @@ return [
     'unauthorized_access'                       => '非法访问',
     'title'                                     => '标题',
     'click_here'                                => '如果您的浏览器没有自动跳转，请点击这里',
+    'Impersonate'                               => '假冒他人',
+    'Leave_Impersonation'                       => '恢复身份',
 ];
